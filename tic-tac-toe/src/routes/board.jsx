@@ -1,16 +1,17 @@
+import React from 'react'
 
-import { Link } from "react-router-dom";
-import tictactoeImg from "../assets/5x5-tic-tac-toe.jpg"
+import BoardSizes from '../helpers/board-size'
 
-export default function Root() {
 
+console.log(BoardSizes.five)
+function board() {
     return (
         <>
             <div className="outermost-container lg:flex">
                 <main className="lg:w-[60%]">
                     <h1 className="text-orange-500 p-6 text-center">Web Tic Tac Toe</h1>
                     <div className="hero-image w-[80%] h-[80vh] m-auto ">
-                        <img src={tictactoeImg} className="block m-auto" alt="tic-tac-toe-image" />
+
                         <h3 className="text-center text-orange-300 text-xl">
                             Challenge Your Mind with 5X5 Tic-Tac-Toe
                         </h3>
@@ -27,14 +28,6 @@ export default function Root() {
                             </h1>
 
 
-
-                            <Link to={`board`} className="btn bg-black block p-4 rounded-sm mb-2 text-center"> [Play Now] </Link>
-                            <button className="btn bg-slate-500 inline-block p-4 rounded-sm" type="button"> [Learn More]  </button> (scrolls down to more information)
-
-
-                            <p className="p-4 text-2xl">
-                                A dynamic Tic-Tac-Toe game in action, showing different board sizes and a variety of gameplay options.
-                            </p>
 
                         </section>
 
@@ -75,5 +68,7 @@ export default function Root() {
                 </aside>
             </div>
         </>
-    );
+    )
 }
+
+export default board
