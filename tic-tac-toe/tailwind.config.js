@@ -16,7 +16,7 @@
 module.exports = {
   content: [
     "./src/**/*.{html,js}",
-    "./src/routes/*.{js,ts,jsx,tsx}"
+    "./src/**/*.{js,ts,jsx,tsx}"
   ],
   theme: {
     extend: {},

@@ -31,3 +31,27 @@ h1 {
 .steps-to-play li {
   list-style: upper-alpha;
 }
+
+.form-inputs {
+	@apply w-[80%] mb-3 h-10 rounded-md bg-gray-500 p-5 outline-none text-xl text-black;
+}
+
+.grid-boxes-three{
+	@apply even:bg-purple-700 odd:bg-red-700 w-[109px] h-[109px] transition delay-300 ease-in-out
+}
+
+.grid-boxes-four{
+	@apply even:bg-purple-700 odd:bg-red-700 w-[82px] h-[82px] transition delay-300 ease-in-out
+}
+
+.grid-boxes-five{
+	@apply even:bg-purple-700 odd:bg-red-700 w-[65px] h-[65px] transition delay-300 ease-in-out
+}
+
+.size{
+	@apply w-[50px] h-[50px] rounded-full flex items-center justify-center bg-gray-700
+}
+
+.active-link{
+	@apply bg-orange-700
+}
