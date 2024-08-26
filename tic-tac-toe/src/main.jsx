@@ -3,13 +3,14 @@ import * as ReactDOM from "react-dom/client";
 import {
   createBrowserRouter,
   RouterProvider,
+
 } from "react-router-dom";
 import "./index.css";
 
 import Root from "./routes/root";
 import ErrorPage from './error-page';
-import BoardPage from "./routes/board";
-
+import TicTacToe from "./routes/tic-tac-toe";
+import { ticTacToeLoader } from "./loaders/tic_tac_toe_loader";
 
 const router = createBrowserRouter([
   {
@@ -18,8 +19,9 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />,
   },
   {
-    path: "/board",
-    element: <BoardPage />,
+    path: "/tic-tac-toe",
+    element: <TicTacToe />,
+    loader: ticTacToeLoader,
     errorElement: <ErrorPage />,
   },
 ]);

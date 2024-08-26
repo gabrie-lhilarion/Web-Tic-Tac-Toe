@@ -28,7 +28,7 @@ export default function Root() {
 
 
 
-                            <Link to={`board`} className="btn bg-black block p-4 rounded-sm mb-2 text-center"> [Play Now] </Link>
+                            <Link to={`tic-tac-toe`} className="btn bg-black block p-4 rounded-sm mb-2 text-center"> [Play Now] </Link>
                             <button className="btn bg-slate-500 inline-block p-4 rounded-sm" type="button"> [Learn More]  </button> (scrolls down to more information)
 
 
