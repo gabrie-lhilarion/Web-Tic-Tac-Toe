@@ -53,7 +53,7 @@ export const addBoth = (el) => {
 
 export const hideInputElement = (el) => {
 
-    if (el.id === 'four' || el.id === 'five') {
+    if (el.id === 'friend' || el.id === 'both') {
 
         el.parentElement.querySelectorAll('p')
             .forEach((paragragh) => {
@@ -71,4 +71,10 @@ export const hideInputElement = (el) => {
             })
     }
 
+}
+
+export const highlightBoardChoice = (el) => {
+
+    el.parentElement.querySelectorAll("li").forEach(item => item.classList.remove("bg-orange-800"))
+    el.classList.add("bg-orange-800")
 }

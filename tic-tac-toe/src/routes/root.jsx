@@ -1,6 +1,8 @@
 
 import { Link } from "react-router-dom";
+import Header from "../components/header";
 import tictactoeImg from "../assets/5x5-tic-tac-toe.jpg"
+
 
 export default function Root() {
 
@@ -27,12 +29,15 @@ export default function Root() {
                             </h1>
 
 
+                            <Header />
+                            {/* <Link to={`tic-tac-toe`} className="btn bg-black block p-4 rounded-sm mb-2 text-center"> [Play Now] </Link> */}
 
-                            <Link to={`tic-tac-toe`} className="btn bg-black block p-4 rounded-sm mb-2 text-center"> [Play Now] </Link>
-                            <button className="btn bg-slate-500 inline-block p-4 rounded-sm" type="button"> [Learn More]  </button> (scrolls down to more information)
+                            <div className="text-center m-auto mt-4 mb-4">
+                                (scrolls down to more information)
+                            </div>
 
 
-                            <p className="p-4 text-2xl">
+                            <p className="p-4 text-2xl bg-orange-800 mb-2">
                                 A dynamic Tic-Tac-Toe game in action, showing different board sizes and a variety of gameplay options.
                             </p>
 
