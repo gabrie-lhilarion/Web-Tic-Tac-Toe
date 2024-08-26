@@ -60,32 +60,7 @@ function TicTacToe() {
                                 cls={Styles.hero_heading_one}
                                 textInfo={Text.hero}
                             />
-                            <div>
-                                <HeadingTwo
-                                    cls={Styles.heading_two}
-                                    textInfo={'Choose Play Mode'}
-                                />
 
-                                <ul className={Styles.play_mode_ul} onClick={(e) => playMode(e.target)}>
-                                    <Opponent
-                                        type={'ai'}
-                                        textInfo={'Play with AI'}
-                                        buttonText={null}
-                                    />
-
-                                    <Opponent
-                                        type={'friend'}
-                                        textInfo={'Play with a friend'}
-                                        buttonText={'Add friend'}
-                                    />
-
-                                    <Opponent
-                                        type={'both'}
-                                        textInfo={'Play with both AI and a friend'}
-                                        buttonText={'Add friend'}
-                                    />
-                                </ul>
-                            </div>
 
                             <div className='mt-6'>
                                 <HeadingTwo
@@ -98,6 +73,34 @@ function TicTacToe() {
                                     <BoardChoice setBoardSize={setBoardSize} thisSize={5} textInfo={'5x5 Board'} />
                                 </ul>
                             </div>
+
+                            <div>
+                                <HeadingTwo
+                                    cls={Styles.heading_two}
+                                    textInfo={'Choose Play Mode'}
+                                />
+
+                                <ul className={Styles.play_mode_ul} onClick={(e) => playMode(e.target)}>
+                                    <Opponent
+                                        type={'ai'}
+                                        textInfo={'Play with AI  ☀ '}
+                                        buttonText={null}
+                                    />
+
+                                    <Opponent
+                                        type={'friend'}
+                                        textInfo={'Play with a friend ☻'}
+                                        buttonText={'Add friend'}
+                                    />
+
+                                    <Opponent
+                                        type={'both'}
+                                        textInfo={'Play with both AI and a friend ☀ && ☻'}
+                                        buttonText={'Add friend'}
+                                    />
+                                </ul>
+                            </div>
+
 
                             <StartGameBtn textInfo={'Start Game'} />
 

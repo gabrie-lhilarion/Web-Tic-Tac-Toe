@@ -10,7 +10,7 @@ function Opponent({ type, textInfo, buttonText }) {
                 id="three"
                 data-opponent='AI'
                 onClick={(e) => addAI(e.target)}
-                className='play_with_ai p-2  cursor-pointer hover:bg-orange-800 pl-6'>
+                className='play_with_ai p-2 bg-orange-800 pl-6 cursor-pointer hover:bg-orange-800 pl-6 rounded-lg'>
                 {textInfo}
             </li>
         )
@@ -19,7 +19,7 @@ function Opponent({ type, textInfo, buttonText }) {
 
     if (type === 'friend') {
         return (
-            <li id="friend" data-opponent='friend' className='play_with_friend p-2 cursor-pointer hover:bg-orange-800 pl-6'>
+            <li id="friend" data-opponent='friend' className='play_with_friend p-2 cursor-pointer hover:bg-orange-800 pl-6 rounded-lg'>
                 {textInfo}
                 <input type="text" className='hidden' placeholder='enter name' />
                 <p className='hidden'>
@@ -34,7 +34,7 @@ function Opponent({ type, textInfo, buttonText }) {
 
     if (type === 'both') {
         return (
-            <li id="both" className='play_with_both  p-2  cursor-pointer hover:bg-orange-800 pl-6'>
+            <li id="both" className='play_with_both  p-2  cursor-pointer hover:bg-orange-800 pl-6 rounded-lg'>
                 {textInfo}
                 <p className='hidden'>
                     <input type="text" className='p-3 ml-3 text-slate-500' placeholder='enter name' />

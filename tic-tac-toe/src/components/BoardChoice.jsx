@@ -5,7 +5,10 @@ function BoardChoice({ setBoardSize, thisSize, textInfo }) {
         <li
             onClick={(e) => setBoardSize(e.target)}
             id={thisSize}
-            className='board_3x3 p-2 cursor-pointer hover:bg-orange-800 pl-6'>
+            className={
+                thisSize === 3 ?
+                    ` bg-orange-800 board_3x3 p-4 rounded-full cursor-pointer hover:bg-orange-800  inline-block` : `board_3x3 p-4 rounde-full cursor-pointer hover:bg-orange-800 inline-block`
+            }>
             {textInfo}
         </li>
     )

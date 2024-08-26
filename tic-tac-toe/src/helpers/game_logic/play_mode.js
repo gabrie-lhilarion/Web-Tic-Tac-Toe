@@ -76,5 +76,5 @@ export const hideInputElement = (el) => {
 export const highlightBoardChoice = (el) => {
 
     el.parentElement.querySelectorAll("li").forEach(item => item.classList.remove("bg-orange-800"))
-    el.classList.add("bg-orange-800")
+    el.classList.add("bg-orange-800", "rounded-full")
 }
