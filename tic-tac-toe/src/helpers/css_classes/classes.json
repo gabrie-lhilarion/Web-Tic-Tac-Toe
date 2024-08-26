@@ -1,0 +1,14 @@
+{
+    "sideBar": "lg:w-[40%] p-6 font-bold flex justify-center align-cener",
+    "outermost_container": "outermost-container lg:flex",
+    "sideBar_inner": "content bg-orange-700 p-6 scroll lg:h-[90vh] overflow-y-auto",
+    "hero_heading_one": "mb-4",
+    "heading_one": "text-orange-500 p-6 text-center",
+    "heading_one_inner": "hero-image w-[80%] h-[80vh] m-auto p-2",
+    "heading_two": "bg-black text-2xl block p-4 rounded-sm mb-0 text-center cursor-pointer",
+    "play_mode_ul": "play_mode bg-slate-800 p-2",
+    "board_size_ul": "board-size bg-slate-800 p-2",
+    "main": "lg:w-[60%]",
+    "game_board": "lg:h-[70vh] grid grid-cols-5 gap-2 place-items-stretch text-center bg-slate-600 p-[1px]",
+    "cells": "bg-orange-300 grid place-items-center text-3xl"
+}

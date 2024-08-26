@@ -31,3 +31,8 @@ h1 {
 .steps-to-play li {
   list-style: upper-alpha;
 }
+
+.play_mode li {
+  list-style: inside;
+  list-style-type: decimal;
+}
