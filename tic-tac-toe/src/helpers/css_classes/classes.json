@@ -10,5 +10,6 @@
     "board_size_ul": "board-size bg-slate-800 p-2",
     "main": "lg:w-[60%]",
     "game_board": "lg:h-[70vh] grid grid-cols-5 gap-2 place-items-stretch text-center bg-slate-600 p-[1px]",
-    "cells": "bg-orange-300 grid place-items-center text-3xl"
+    "cells": "bg-orange-300 grid place-items-center text-3xl",
+    "play_with_ai": "play_with_ai p-2 bg-orange-800 pl-6 cursor-pointer hover:bg-orange-800 pl-6 rounded-lg"
 }
