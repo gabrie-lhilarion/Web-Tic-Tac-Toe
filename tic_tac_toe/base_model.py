@@ -2,6 +2,7 @@
 """ Base Model for Tic Tact Toe """
 
 import os
+import random
 
 
 class BaseModel:
@@ -62,7 +63,7 @@ def print_header():
 
 def ai_move(board, user):
     possible_moves = [i for i, cell in enumerate(board.cells) if cell == ' ']
-    move = random.choice(possible_moves)
+    move = possible_moves[0]
     board.b_update(move, user)
 
 def refresh_board():
@@ -75,59 +76,57 @@ def play_again():
     return option.upper() == 'Y'
 
 def game_loop(player_1, player_2):
+    current_player = player_1
+    player_symbol = 'X'
     while True:
-        current_player = player_1
-        player_symbol = 'X'
-        board.b_clear()
         refresh_board()
 
-        while True:
-            '''Get Player_1's input'''
+        if current_player is not 'AI':
+            try:
+                choice = int(input(f"{current_player} pick your choice ({player_symbol}) (0-8):>> "))
+                while not board.b_update(choice, player_symbol):
+                    print('cell taken choice under number')
+                    choice = int(input("pick a choice (0-8):>> "))
 
-            if current_player != 'AI':
-                try:
-                    choice = int(input(f"{current_player} pick your choice (0-8):>> "))
-                    while not board.b_update(choice, player_symbol):
-                        print('cell taken choice under number')
-                        choice = int(input("pick a choice (0-8):>> "))
+            except ValueError:
+                print('Enter a valid number (0-8).')
+            except IndexError:
+                print('Enter a number within the range (0-8).')
 
-                except ValueError:
-                    print('Enter a valid number (0-8).')
-                except IndexError:
-
-                    print('Enter a number within the range (0-8).')
-            else:
-                print('{play_2} pick your choice (0-8):>> ')
-                ai_move(board, '0')
-
+        else:
+            possible_moves = [i for i, cell in enumerate(board.cells) if cell == ' ']
+            move = random.choice(possible_moves)
+            board.b_update(move, player_symbol)
             refresh_board()
+            print('{player_2} has made a choice.')
 
-            winner = board.win_checker()
-            if winner:
-                winner_name = player_1 if winner == 'X' else player_2
-                print(f'{winner_name} wins!')
-                option = input('Press Y to play again or N to quit>> ')
-                if not play_again():
-                    break
-                else:
-                    board.b_clear()
+        refresh_board()
 
-            if board.tie_checker():
-                print("It's a tie")
-                option = input('Press Y to play again or N to quit>>  ')
-                if not play_again():
-                    break
-                else:
-                    board.b_clear()
-
-
-
-            if current_player == player_1:
-                current_player = player_2
-                player_symbol = 'O'
+        winner = board.win_checker()
+        if winner:
+            winner_name = player_1 if winner == 'X' else player_2
+            print(f'{winner_name} wins!')
+            '''option = input('Press Y to play again or N to quit>> ')'''
+            if not play_again():
+                break
             else:
-                current_player == player_2
-                player_symbol = 'X'
+                board.b_clear()
+
+        if board.tie_checker():
+            print("It's a tie")
+            ''' option = input('Press Y to play again or N to quit>>  ')'''
+            if not play_again():
+                break
+            else:
+                board.b_clear()
+
+
+        if current_player == player_1:
+            current_player = player_2
+            player_symbol = 'O'
+        else:
+            current_player = player_2
+            player_symbol = 'X'
 
 
 board = BaseModel()
