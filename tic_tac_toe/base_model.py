@@ -141,8 +141,6 @@ if mode == '1':
     player_2 = input("Enter Player_2's Name>> ")
     game_loop(player_1, player_2)
 elif mode == '2':
-    player_1 = input("Enter Player_1's Name>> ")
-    player_2 = 'AI'
-    game_loop(player_1, player_2)
+    print('Still under review')
 else:
     print('Choose a valid number to play the came')
